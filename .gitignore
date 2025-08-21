@@ -1,0 +1,4 @@
+.env
+.user-*
+.venv
+__pycache__/
