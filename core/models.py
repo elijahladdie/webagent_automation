@@ -14,7 +14,7 @@ class ParsedIntent(BaseModel):
 
 class DomAction(BaseModel):
     description: str
-    locator: str  # CSS/XPath/role
+    locator: str 
     action: Literal["click", "fill", "press", "type"]
     value: Optional[str] = None
 

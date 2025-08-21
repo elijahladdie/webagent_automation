@@ -41,12 +41,12 @@ def run(
     # If no subject extracted, fallback to default
     if not parsed.subject:
         parsed.subject = "Quick note"
-    # --- NEW: Infer recipient name if missing ---
+    # get recipient name from email if not provided
     if not getattr(parsed, "recipient_name", None):
         local_part = parsed.recipient.split("@")[0]
         guessed_name = local_part.split(".")[0].capitalize()
         parsed.recipient_name = guessed_name
-    # Paraphrase the message with context (recipient name included if available)
+    # Paraphrase the message 
     polished = paraphrase(parsed.message)
     # 2) Provider
     prov = choose_provider(ins.provider)

@@ -6,7 +6,7 @@ import os
 
 class Provider(ABC):
     name: str
-    storage_state: Optional[str] = None  # Optional path to persist login
+    storage_state: Optional[str] = None
 
     @abstractmethod
     async def plan(self, intent: ParsedIntent) -> Plan:

@@ -23,13 +23,6 @@ class OutlookProvider(Provider):
 
         print("[DEBUG] Navigating to Outlook...")
         await page.goto(OUTLOOK)
-
-        # print("[DEBUG] Waiting for Outlook mailbox to load...")
-        # try:
-        #     await page.wait_for_selector("div[role='navigation']", timeout=30000)
-        #     print("[DEBUG] Mailbox loaded.")
-        # except:
-        #     print("[ERROR] Outlook did not fully load. Capturing snapshot...")
          
         print("[DEBUG] Checking if Outlook requires login...")
         try:

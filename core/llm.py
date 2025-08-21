@@ -39,7 +39,7 @@ def extract_intent(text: str) -> ParsedIntent:
         data = json.loads(raw)
         return ParsedIntent(**data)
     except Exception:
-        # Safe regex fallback (very simple)
+        # Safe regex fallback
         email = re.search(r"[\w.\-+]+@[\w.\-]+", text)
         msg_match = re.search(r"saying\s+'([^']+)'|saying\s+\"([^\"]+)\"|: (.+)$", text, re.I)
         message = (

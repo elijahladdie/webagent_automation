@@ -68,8 +68,8 @@ class GmailProvider(Provider):
                         await loc.fill(a.value or "")
                         print(f"[DEBUG] Filled with: {a.value}")
                     elif a.action == "type":
-                        await loc.click()  # ensure focus before typing
-                        await loc.type(a.value or "", delay=100)  # slow typing for Gmail chips
+                        await loc.click() 
+                        await loc.type(a.value or "", delay=100)
                         print(f"[DEBUG] Typed: {a.value}")
             except Exception as e:
                 print(f"[ERROR] Failed at step '{a.description}': {e}")
